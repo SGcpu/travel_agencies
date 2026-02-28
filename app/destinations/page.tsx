@@ -7,7 +7,7 @@ import { RevealText } from "@/components/animations/RevealText";
 export const metadata: Metadata = {
   title: "Destinations",
   description:
-    "Explore our curated collection of extraordinary destinations — from the Amalfi Coast to the Maldives, Patagonia, Kenya, Japan, and Morocco.",
+    "Explore our curated collection of extraordinary Indian journeys — from the palaces of Rajasthan to the backwaters of Kerala, the high passes of Ladakh, and the ghats of Varanasi.",
   openGraph: {
     title: "Destinations | Aura Voyages",
     description: "Discover the world's most extraordinary private journeys.",
@@ -16,12 +16,12 @@ export const metadata: Metadata = {
 
 const regions = [
   "All",
-  "Europe",
-  "Asia",
-  "Americas",
-  "Africa",
-  "Oceania",
-  "Middle East",
+  "North India",
+  "South India",
+  "Himalayan",
+  "Coastal",
+  "East India",
+  "Central India",
 ] as const;
 
 export default async function DestinationsPage({

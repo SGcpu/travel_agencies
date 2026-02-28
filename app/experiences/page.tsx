@@ -7,69 +7,69 @@ import { Button } from "@/components/ui/Button";
 export const metadata: Metadata = {
   title: "Experiences",
   description:
-    "Safaris, luxury cruises, culinary journeys, wellness retreats, and private expeditions — curated for exceptional travellers.",
+    "Heritage palace stays, tiger safaris, Ayurvedic retreats, sacred pilgrimages, Himalayan expeditions, and royal culinary journeys — curated across India for exceptional travellers.",
 };
 
 const experiences = [
   {
-    id: "safari",
-    title: "Private Safari",
-    tagline: "Witness life in its rawest form",
+    id: "heritage-stays",
+    title: "Heritage Palace Stays",
+    tagline: "Sleep where emperors once ruled",
     description:
-      "Exclusive conservancy access, master guides, and camps that blend absolute comfort with wilderness immersion. We work with three master guides in Africa — none of whom take more than 8 guests.",
+      "Rajasthan's palace hotels are not hotels — they are functioning aristocratic residences that have been quietly hosting guests for decades. We arrange heritage suites at Umaid Bhawan, the Taj Lake Palace, and three privately-owned haveli estates not listed on any booking platform.",
+    image:
+      "https://images.unsplash.com/photo-1477587458883-47145ed94245?w=1200&q=85",
+    tags: ["Rajasthan", "Heritage", "Architecture"],
+  },
+  {
+    id: "wildlife-safari",
+    title: "Wildlife Safaris",
+    tagline: "India's wilderness, without the crowds",
+    description:
+      "Pre-dawn Ranthambore gypsies before the gates open to the public. Private elephant corridors in Corbett. Walking safaris with Baiga guides in Kanha's buffer zone. We work with three naturalists in India — none of whom take more than six guests.",
     image:
       "https://images.unsplash.com/photo-1516426122078-c23e76319801?w=1200&q=85",
-    tags: ["Africa", "Wildlife", "Photography"],
+    tags: ["Wildlife", "Tiger", "Nature"],
   },
   {
-    id: "yacht",
-    title: "Private Yacht Charter",
-    tagline: "The horizon as your itinerary",
+    id: "ayurvedic-wellness",
+    title: "Ayurvedic Wellness Retreats",
+    tagline: "5,000 years of medicine. Your week off.",
     description:
-      "From the Greek Islands to French Polynesia, we arrange crewed private yacht charters with bespoke daily routing. Your captain, your pace, your sea.",
-    image:
-      "https://images.unsplash.com/photo-1567899378494-47b22a2ae96a?w=1200&q=85",
-    tags: ["Mediterranean", "Oceania", "Luxury"],
-  },
-  {
-    id: "culinary",
-    title: "Culinary Journeys",
-    tagline: "Eat the world — without the tourist menu",
-    description:
-      "Private access to Michelin-starred kitchens, back-road truffle hunters, coastal fish markets at dawn, and family tables that have never hosted a tourist.",
-    image:
-      "https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=1200&q=85",
-    tags: ["Food", "Culture", "Italy", "Japan"],
-  },
-  {
-    id: "wellness",
-    title: "Wellness Retreats",
-    tagline: "Rest is also a journey",
-    description:
-      "Ayurvedic immersions in Kerala, Six Senses meditation programs in Portugal, private onsen villas in Hakone. Restorative travel for minds that need to be still.",
+      "Authentic Panchakarma programmes in Kerala's backwater clinics — not spa hotels playing at Ayurveda, but physician-directed detox retreats with 21-day protocols. We also arrange private Yoga and pranayama immersions in Mysore with lineage teachers.",
     image:
       "https://images.unsplash.com/photo-1540555700478-4be289fbecef?w=1200&q=85",
-    tags: ["Wellness", "Asia", "Europe"],
+    tags: ["Wellness", "Kerala", "Ayurveda"],
   },
   {
-    id: "expedition",
-    title: "Expedition & Adventure",
+    id: "culinary-journeys",
+    title: "Royal Culinary Journeys",
+    tagline: "Eat India — without the tourist menu",
+    description:
+      "Private access to the royal kitchen of a Jaipur thakur family, a spice-trading heritage house in Kochi's fort district, and a 4 a.m. Banaras street food walk with the city's most respected chaiwala. India's greatest food is not in restaurants.",
+    image:
+      "https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=1200&q=85",
+    tags: ["Food", "Street Food", "Culture"],
+  },
+  {
+    id: "sacred-circuit",
+    title: "Sacred Pilgrimage Circuit",
+    tagline: "India's spiritual geography, privately witnessed",
+    description:
+      "Pre-dawn access to the Dashashwamedh Aarti on a private boat. Dawn puja at Tirupati without the queue. A private audience with a senior priest at the Jagannath temple. Sacred India is not inaccessible — it merely requires the right introductions.",
+    image:
+      "https://images.unsplash.com/photo-1561361058-c24e022efd17?w=1200&q=85",
+    tags: ["Varanasi", "Spirituality", "Culture"],
+  },
+  {
+    id: "himalayan-expedition",
+    title: "Himalayan Expeditions",
     tagline: "The places that require effort to reach",
     description:
-      "Patagonian trekking, Arctic / Antarctic expeditions, Himalayan foothills, Mongolian steppes. For travellers who believe the greatest views are earned.",
+      "Spiti Valley in its brief snow-free window. Ladakh on a Royal Enfield following the Manali-Leh Highway alone. Nanda Devi base camp on a private permit. For travellers who believe the Himalayas belong to the people willing to show up for them.",
     image:
-      "https://images.unsplash.com/photo-1501854140801-50d01698950b?w=1200&q=85",
-    tags: ["Adventure", "Trekking", "Polar"],
-  },
-  {
-    id: "cultural",
-    title: "Deep Cultural Immersion",
-    tagline: "Not a visitor — a temporary local",
-    description:
-      "Private monastery stays, ceremonial access in Japan and India, after-hours museum tours, living with Berber families in the Atlas Mountains.",
-    image:
-      "https://images.unsplash.com/photo-1493976040374-85c8e12f0c0e?w=1200&q=85",
-    tags: ["Culture", "History", "Japan", "India"],
+      "https://images.unsplash.com/photo-1605649041964-06d8b6523c9e?w=1200&q=85",
+    tags: ["Himalaya", "Ladakh", "Trekking"],
   },
 ];
 
@@ -99,9 +99,9 @@ export default function ExperiencesPage() {
           </RevealText>
           <RevealText delay={0.2}>
             <p className="font-body text-base text-parchment-200/50 max-w-xl leading-relaxed">
-              We specialise in six categories of extraordinary experience. Each
-              is available as a standalone journey or woven into a broader
-              itinerary.
+              Six categories of extraordinary Indian experience. Each is
+              available as a standalone journey or woven into a broader
+              itinerary across the subcontinent.
             </p>
           </RevealText>
         </Container>

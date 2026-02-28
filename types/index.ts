@@ -74,9 +74,9 @@ export interface NavItem {
 }
 
 export type Region =
-  | "Africa"
-  | "Asia"
-  | "Europe"
-  | "Americas"
-  | "Oceania"
-  | "Middle East";
+  | "North India"
+  | "South India"
+  | "Himalayan"
+  | "Coastal"
+  | "East India"
+  | "Central India";

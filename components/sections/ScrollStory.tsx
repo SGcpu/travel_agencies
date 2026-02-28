@@ -11,13 +11,11 @@ gsap.registerPlugin(ScrollTrigger);
 // ─── Static Data ────────────────────────────────────────────────────────────
 
 const QUOTE_WORDS = [
-  "The",
-  "world",
+  "India",
   "does",
   "not",
-  "give",
-  "its",
-  "secrets",
+  "reveal",
+  "herself",
   "to",
   "the",
   "hurried.",
@@ -25,22 +23,22 @@ const QUOTE_WORDS = [
 
 const STRIPS = [
   {
-    name: "Morocco",
-    tagline: "Ancient medinas. Infinite mystery.",
+    name: "Rajasthan",
+    tagline: "Palaces that outlived empires.",
     image:
-      "https://images.unsplash.com/photo-1539020140153-e479b8c22e70?w=900&q=80",
+      "https://images.unsplash.com/photo-1477587458883-47145ed94245?w=900&q=80",
   },
   {
-    name: "Kyoto",
-    tagline: "Where silence holds its breath.",
+    name: "Kerala",
+    tagline: "Silence that floats on water.",
     image:
-      "https://images.unsplash.com/photo-1545569341-9eb8b30979d9?w=900&q=80",
+      "https://images.unsplash.com/photo-1602216056096-3b40cc0c9944?w=900&q=80",
   },
   {
-    name: "Maldives",
-    tagline: "The earth's last blue dream.",
+    name: "Ladakh",
+    tagline: "Where the sky begins at 14,000 feet.",
     image:
-      "https://images.unsplash.com/photo-1514282401047-d79a71a590e8?w=900&q=80",
+      "https://images.unsplash.com/photo-1605649041964-06d8b6523c9e?w=900&q=80",
   },
 ];
 
@@ -314,6 +312,7 @@ export function ScrollStory() {
   return (
     <div
       ref={wrapRef}
+      id="scroll-story"
       style={{ height: "600vh" }}
       className="relative"
       aria-label="Our story — scroll to explore"
@@ -387,7 +386,7 @@ export function ScrollStory() {
           {/* eslint-disable-next-line @next/next/no-img-element */}
           <img
             className="ss-img-2 w-full h-full object-cover"
-            src="https://images.unsplash.com/photo-1501854140801-50d01698950b?w=1920&q=80"
+            src="https://images.unsplash.com/photo-1512343879784-a960bf40e7f2?w=1920&q=80"
             alt="Patagonia wilderness"
           />
 
@@ -511,7 +510,7 @@ export function ScrollStory() {
           {/* eslint-disable-next-line @next/next/no-img-element */}
           <img
             className="ss-s4-img w-full h-full object-cover"
-            src="https://images.unsplash.com/photo-1516426122078-c23e76319801?w=1920&q=80"
+            src="https://images.unsplash.com/photo-1561361058-c24e022efd17?w=1920&q=80"
             alt="Golden hour safari, Maasai Mara"
           />
           <div className="absolute inset-0 bg-obsidian/55" />
@@ -576,7 +575,7 @@ export function ScrollStory() {
           {/* eslint-disable-next-line @next/next/no-img-element */}
           <img
             className="ss-s5-img w-full h-full object-cover"
-            src="https://images.unsplash.com/photo-1505832018823-50331d70d237?w=1920&q=80"
+            src="https://images.unsplash.com/photo-1566836610593-62a64888a216?w=1920&q=80"
             alt="Dawn breaking over the ocean horizon"
           />
           <div className="absolute inset-0 bg-obsidian/60" />

@@ -2,6 +2,12 @@
 
 /* ─── Tailwind v4: CSS-First Theme ──────────────────────────── */
 @theme {
+    /* Colors — brand orange */
+    --color-brand: #F06535;
+    --color-brand-dark: #d4511f;
+    --color-brand-light: #ff8255;
+    --color-brand-muted: #fff0eb;
+
     /* Colors — obsidian */
     --color-obsidian: #0a0a0f;
     --color-obsidian-50: #f2f2f7;
@@ -24,8 +30,9 @@
     --color-sienna-light: #c4724f;
 
     /* Typography */
+    --font-sans: var(--font-jakarta), system-ui, sans-serif;
     --font-display: var(--font-cormorant), Georgia, serif;
-    --font-body: var(--font-inter), system-ui, sans-serif;
+    --font-body: var(--font-jakarta), system-ui, sans-serif;
     --font-accent: var(--font-dm-serif), Georgia, serif;
 
     /* Display text sizes */
@@ -113,8 +120,8 @@ html {
 }
 
 body {
-    background-color: var(--color-obsidian);
-    color: var(--color-parchment);
+    background-color: #ffffff;
+    color: #1a1a1a;
     font-family: var(--font-body);
     overflow-x: hidden;
 }
@@ -124,8 +131,8 @@ h1,
 h2,
 h3,
 h4 {
-    font-family: var(--font-display);
-    font-weight: 400;
+    font-family: var(--font-sans);
+    font-weight: 700;
     letter-spacing: -0.02em;
     line-height: 1.1;
 }
@@ -153,29 +160,54 @@ html.lenis {
 }
 
 ::-webkit-scrollbar-track {
-    background: var(--color-obsidian);
+    background: #f1f1f1;
 }
 
 ::-webkit-scrollbar-thumb {
-    background: var(--color-gold);
+    background: var(--color-brand);
     border-radius: 3px;
 }
 
 /* ─── Selection ─────────────────────────────────────────────── */
 ::selection {
-    background: var(--color-gold);
-    color: var(--color-obsidian);
+    background: var(--color-brand);
+    color: #ffffff;
 }
 
 /* ─── Focus Styles (Accessibility) ─────────────────────────── */
 :focus-visible {
-    outline: 2px solid var(--color-gold);
+    outline: 2px solid var(--color-brand);
     outline-offset: 3px;
     border-radius: 2px;
 }
 
 /* ─── Utility Classes ───────────────────────────────────────── */
 @layer utilities {
+
+    /* Brand orange helpers */
+    .bg-brand {
+        background-color: var(--color-brand);
+    }
+
+    .text-brand {
+        color: var(--color-brand);
+    }
+
+    .border-brand {
+        border-color: var(--color-brand);
+    }
+
+    .hover\:bg-brand-dark:hover {
+        background-color: var(--color-brand-dark);
+    }
+
+    /* Glass navs */
+    .bg-glass-white {
+        background: rgba(255, 255, 255, 0.85);
+        backdrop-filter: blur(20px) saturate(180%);
+        -webkit-backdrop-filter: blur(20px) saturate(180%);
+    }
+
     .text-gradient-gold {
         background: linear-gradient(135deg, var(--color-gold-light), var(--color-gold), var(--color-sienna));
         -webkit-background-clip: text;
@@ -209,8 +241,8 @@ html.lenis {
     }
 
     .section-padding {
-        padding-top: clamp(4rem, 10vw, 8rem);
-        padding-bottom: clamp(4rem, 10vw, 8rem);
+        padding-top: clamp(4rem, 10vw, 7rem);
+        padding-bottom: clamp(4rem, 10vw, 7rem);
     }
 
     .container-luxury {
@@ -218,6 +250,13 @@ html.lenis {
         max-width: 88rem;
         margin-inline: auto;
         padding-inline: clamp(1.5rem, 5vw, 4rem);
+    }
+
+    .container-site {
+        width: 100%;
+        max-width: 80rem;
+        margin-inline: auto;
+        padding-inline: clamp(1.25rem, 4vw, 3rem);
     }
 }
 

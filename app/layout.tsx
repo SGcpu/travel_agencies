@@ -1,9 +1,21 @@
 import type { Metadata } from "next";
-import { Cormorant_Garamond, Inter, DM_Serif_Display } from "next/font/google";
+import {
+  Plus_Jakarta_Sans,
+  Cormorant_Garamond,
+  DM_Serif_Display,
+} from "next/font/google";
 import "./globals.css";
 import { Navbar } from "@/components/layout/Navbar";
 import { Footer } from "@/components/layout/Footer";
 import { SmoothScroll } from "@/components/animations/SmoothScroll";
+
+const plusJakarta = Plus_Jakarta_Sans({
+  subsets: ["latin"],
+  weight: ["300", "400", "500", "600", "700", "800"],
+  variable: "--font-jakarta",
+  display: "swap",
+  preload: true,
+});
 
 const cormorant = Cormorant_Garamond({
   subsets: ["latin"],
@@ -11,15 +23,7 @@ const cormorant = Cormorant_Garamond({
   style: ["normal", "italic"],
   variable: "--font-cormorant",
   display: "swap",
-  preload: true,
-});
-
-const inter = Inter({
-  subsets: ["latin"],
-  weight: ["300", "400", "500", "600"],
-  variable: "--font-inter",
-  display: "swap",
-  preload: true,
+  preload: false,
 });
 
 const dmSerif = DM_Serif_Display({
@@ -100,7 +104,7 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${cormorant.variable} ${inter.variable} ${dmSerif.variable}`}
+      className={`${plusJakarta.variable} ${cormorant.variable} ${dmSerif.variable}`}
     >
       <head>
         <script
@@ -127,10 +131,10 @@ export default function RootLayout({
           }}
         />
       </head>
-      <body className="bg-obsidian text-parchment antialiased">
+      <body className="bg-white text-gray-900 antialiased">
         <SmoothScroll>
           <Navbar />
-          <main>{children}</main>
+          {children}
           <Footer />
         </SmoothScroll>
       </body>

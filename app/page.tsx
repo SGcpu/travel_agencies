@@ -1,50 +1,54 @@
 import type { Metadata } from "next";
-import { HeroSection } from "@/components/sections/HeroSection";
-import { ScrollStory } from "@/components/sections/ScrollStory";
-import { DestinationsGrid } from "@/components/sections/DestinationsGrid";
-import { StatsSection } from "@/components/sections/StatsSection";
-import { StoriesPreview } from "@/components/sections/StoriesPreview";
-import { TestimonialsSection } from "@/components/sections/TestimonialsSection";
-import { CTASection } from "@/components/sections/CTASection";
+import { HomeHero } from "@/components/home/HomeHero";
+import { BookingWidget } from "@/components/home/BookingWidget";
+import { AboutSection } from "@/components/home/AboutSection";
+import { WhyChooseUs } from "@/components/home/WhyChooseUs";
+import { ServicesGrid } from "@/components/home/ServicesGrid";
+import { AppPromo } from "@/components/home/AppPromo";
+import { BusCollection } from "@/components/home/BusCollection";
+import { HomeTestimonials } from "@/components/home/HomeTestimonials";
 
 export const metadata: Metadata = {
-  title: "Aura Voyages — Cinematic Luxury Travel",
+  title: "JKTT India — Premium JKTT & Group Travel",
   description:
-    "Bespoke luxury travel experiences for the discerning explorer. Private villas, expert guides, and journeys that transform.",
+    "India's most trusted JKTT service. Volvo coaches, Innova Crystas, and Tempo Travellers with professional drivers across Rajasthan, Kerala, Ladakh, Goa, and every Indian highway.",
   openGraph: {
-    title: "Aura Voyages — Cinematic Luxury Travel",
+    title: "JKTT India — Premium JKTT & Group Travel",
     description:
-      "Bespoke luxury travel experiences for the discerning explorer.",
+      "Luxury coaches and group vehicles across India. Book your charter today.",
     images: ["/og-image.jpg"],
   },
 };
 
-// Emotional arc: Wonder (Hero) → Discovery (Destinations) →
-//   Trust (Stats) → Desire (Stories) → Trust (Testimonials) → Action (CTA)
 export default function HomePage() {
   return (
-    <>
-      {/* ACT I — WONDER: Full-bleed cinematic capture */}
-      <HeroSection />
+    <main>
+      {/* 1. Hero — full-bleed bus + headline */}
+      <HomeHero />
 
-      {/* NARRATIVE BRIDGE: Scroll-driven storytelling — 5 scenes, 600vh */}
-      {/* Wonder → Quote → Destination explosion → World scope → Trust → Call */}
-      <ScrollStory />
+      {/* 2. Booking widget — straddles hero/content boundary */}
+      <BookingWidget />
 
-      {/* ACT II — DISCOVERY: Featured destinations */}
-      <DestinationsGrid />
+      {/* 3. White breathing-room spacer above About */}
+      <div className="h-20 sm:h-28 bg-white" aria-hidden="true" />
 
-      {/* AUTHORITY INTERLUDE: Agency credentials through numbers */}
-      <StatsSection />
+      {/* 4. About Us — split asymmetrical */}
+      <AboutSection />
 
-      {/* ACT II.b — DESIRE: Narrative travel stories spark aspiration */}
-      <StoriesPreview />
+      {/* 5. Why Choose Us — dark contrast with animated counters */}
+      <WhyChooseUs />
 
-      {/* TRUST LAYER: Real client voices reduce conversion friction */}
-      <TestimonialsSection />
+      {/* 6. Services Grid — 3-col with orange highlight card */}
+      <ServicesGrid />
 
-      {/* ACT III — ACTION: Invitation to begin */}
-      <CTASection />
-    </>
+      {/* 7. App Promo — split black/white */}
+      <AppPromo />
+
+      {/* 8. Bus Collection — 3-col fleet cards */}
+      <BusCollection />
+
+      {/* 9. Testimonials — dark parallax with overlapping cards */}
+      <HomeTestimonials />
+    </main>
   );
 }
